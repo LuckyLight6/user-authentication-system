@@ -28,7 +28,8 @@ export const constantRouterMap = [
   {
     path: '/dashboard',
     name: 'Dashboard',
-    component: () => import('@/views/dashboard/index')
+    component: () => import('@/views/dashboard/index'),
+    hidden: true
   },
   {
     path: '*',

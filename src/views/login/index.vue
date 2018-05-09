@@ -40,9 +40,8 @@ export default {
   methods: {
     handleLogin() {
       this.$store.dispatch('Login', this.loginForm).then(() => {
-        this.$router.push({
-          name: 'Dashboard'
-        })
+        location.reload() // 为了重新实例化vue-router对象 避免bug
+        this.$router.push('/dashboard')
       })
     }
   }
